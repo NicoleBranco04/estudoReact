@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <di>
+        <div className="footer">
             <h2>
                 Consulte a Programação completa em
                 <a href="http://www.sp.senac.br/tatupe">
@@ -8,7 +8,7 @@ function Footer(){
                 </a>
                 Escaneie o QR Code
             </h2>
-        </di>
+        </div>
     )
 }
 export default Footer;

@@ -10,11 +10,29 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    background-color: rgb( rgb(142, 142, 212));
+    color: black;
+    background-color:  rgb(131, 131, 224);
 }
 
 .header img{
-    width: 100px;
-    height: 60px;
+    width: 150px;
+    height: 80px;
+}
+
+.main{
+    height: 65vh;
+    padding: 20px;
+}
+
+.footer{
+    height: 15vh;
+    background-color: rgb(125, 101, 148);
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+     text-decoration: none;
+     display: block;
+     color: #fff;
 }
