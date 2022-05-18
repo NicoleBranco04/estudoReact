@@ -5,14 +5,21 @@ export default function Mensagens(props){
 
     return (
         <div className="mensagem"> 
-           <h4>
-               Titulo da Mensagem
+         {props.info.map((m,i) =>(
+        <div key={i}>
+          <h4>
+               Titulo da Mensagem:
                <br />
                {props.info[0].titulo}
-           </h4>
-           <h2>Titulo da Mensagem</h2>
-           <h3>Autor: {props.info[0].autor}</h3>
-           <p>Mensagem: {props.info[0].mensagem}</p>
+          </h4>
+
+           <h5>Autor: {m.autor}</h5>
+           <p>Mensagem: {m.mensagem}</p>
+           <hr/>
+           <br/>
+           </div>
+
+           ))}
         </div>
     );
 }
