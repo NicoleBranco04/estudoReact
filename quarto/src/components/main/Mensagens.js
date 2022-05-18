@@ -10,7 +10,7 @@ export default function Mensagens(props){
           <h4>
                Titulo da Mensagem:
                <br />
-               {props.info[0].titulo}
+               {m.titulo}
           </h4>
 
            <h5>Autor: {m.autor}</h5>
