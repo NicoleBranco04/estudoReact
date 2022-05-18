@@ -11,7 +11,13 @@ export default function Container(){
     //O comando useEffect é um comando de laço, portanto é necessario fazer
     //ele parar o laço quando terminar de carregar os dados. Isso é feito usando um colchetes ao final da instrução.
     //Para obter so dados iremos usar o comando fetch dentro do useEffect
-
+ 
+    const [nome,setNome] = useState([
+      {
+        autor:"",
+        mensagem:"",
+      },
+    ]);
     const [produtos,setProdutos] = useState([
       {
           id:"",
@@ -28,11 +34,17 @@ export default function Container(){
         setProdutos(dados.output);
       });
   },[]);
+
+    const carregaMensagem = (mensagem)=>{
+       setNome(mensagem);
+       console.log(mensagem);
+
+    };
     
     return(
       <div className="container">
-          <Mensagens dados = {produtos}/>
-          <Conteudo dados = {produtos}/>
+          <Mensagens info ={nome}/>
+          <Conteudo dados = {produtos} acao = {carregaMensagem}/>
       </div>
-    )
+    );
 }
